@@ -12,12 +12,16 @@
   },
   "dependencies": {
     "@strapi/plugin-cloud": "5.0.2",
+    "@strapi/plugin-seo": "^2.0.0",
     "@strapi/plugin-users-permissions": "5.0.2",
     "@strapi/strapi": "5.0.2",
+    "add": "^2.0.6",
     "better-sqlite3": "9.4.3",
+    "pg": "^8.13.0",
     "react": "^18.0.0",
     "react-dom": "^18.0.0",
     "react-router-dom": "^6.0.0",
+    "slugify": "^1.6.6",
     "styled-components": "^6.0.0"
   },
   "devDependencies": {

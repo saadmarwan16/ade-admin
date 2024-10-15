@@ -1,0 +1,22 @@
+{
+  "collectionName": "components_components_single_avatars",
+  "info": {
+    "displayName": "Single Avatar",
+    "icon": "user"
+  },
+  "options": {},
+  "attributes": {
+    "alt": {
+      "type": "string",
+      "required": true
+    },
+    "image": {
+      "allowedTypes": [
+        "images"
+      ],
+      "type": "media",
+      "multiple": false,
+      "required": true
+    }
+  }
+}

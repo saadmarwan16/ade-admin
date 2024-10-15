@@ -1,0 +1,14 @@
+{
+  "collectionName": "components_components_instagrams",
+  "info": {
+    "displayName": "Instagram",
+    "icon": "twitter"
+  },
+  "options": {},
+  "attributes": {
+    "link": {
+      "type": "string",
+      "required": true
+    }
+  }
+}

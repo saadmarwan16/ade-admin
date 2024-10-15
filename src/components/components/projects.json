@@ -1,0 +1,43 @@
+{
+  "collectionName": "components_components_projects",
+  "info": {
+    "displayName": "Projects"
+  },
+  "options": {},
+  "attributes": {
+    "type": {
+      "type": "enumeration",
+      "enum": [
+        "Projects",
+        "Companies",
+        "NGOs"
+      ],
+      "required": true
+    },
+    "title": {
+      "type": "string",
+      "required": true,
+      "unique": true,
+      "minLength": 15,
+      "maxLength": 150
+    },
+    "description": {
+      "type": "text",
+      "required": true,
+      "minLength": 100,
+      "maxLength": 350
+    },
+    "link": {
+      "type": "string",
+      "required": false
+    },
+    "image": {
+      "allowedTypes": [
+        "images"
+      ],
+      "type": "media",
+      "multiple": false,
+      "required": true
+    }
+  }
+}

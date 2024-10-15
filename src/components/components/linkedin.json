@@ -1,0 +1,14 @@
+{
+  "collectionName": "components_components_linkedins",
+  "info": {
+    "displayName": "Linkedin",
+    "icon": "twitter"
+  },
+  "options": {},
+  "attributes": {
+    "link": {
+      "type": "string",
+      "required": true
+    }
+  }
+}

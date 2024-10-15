@@ -1,0 +1,38 @@
+{
+  "kind": "singleType",
+  "collectionName": "metas",
+  "info": {
+    "singularName": "meta",
+    "pluralName": "metas",
+    "displayName": "Meta"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "instagram": {
+      "type": "component",
+      "repeatable": false,
+      "component": "components.instagram",
+      "required": true
+    },
+    "linkedin": {
+      "type": "component",
+      "repeatable": false,
+      "component": "components.linkedin",
+      "required": true
+    },
+    "email": {
+      "type": "component",
+      "repeatable": false,
+      "component": "components.email"
+    },
+    "avatar": {
+      "type": "component",
+      "repeatable": false,
+      "component": "components.single-avatar",
+      "required": true
+    }
+  }
+}

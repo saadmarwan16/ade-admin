@@ -1,0 +1,32 @@
+{
+  "collectionName": "components_components_details_of_mes",
+  "info": {
+    "displayName": "Details of Me",
+    "icon": "heart"
+  },
+  "options": {},
+  "attributes": {
+    "title": {
+      "type": "string",
+      "unique": true,
+      "required": true,
+      "minLength": 2,
+      "maxLength": 150
+    },
+    "description": {
+      "type": "text",
+      "unique": true,
+      "required": true,
+      "minLength": 75,
+      "maxLength": 450
+    },
+    "image": {
+      "allowedTypes": [
+        "images"
+      ],
+      "type": "media",
+      "multiple": false,
+      "required": true
+    }
+  }
+}
