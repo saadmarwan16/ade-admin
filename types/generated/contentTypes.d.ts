@@ -916,6 +916,7 @@ export interface ApiMetaMeta extends Struct.SingleTypeSchema {
     singularName: 'meta';
     pluralName: 'metas';
     displayName: 'Meta';
+    description: '';
   };
   options: {
     draftAndPublish: true;

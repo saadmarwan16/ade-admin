@@ -2,7 +2,8 @@
   "collectionName": "components_components_logos",
   "info": {
     "displayName": "Logos",
-    "icon": "twitter"
+    "icon": "twitter",
+    "description": ""
   },
   "options": {},
   "attributes": {
@@ -11,16 +12,17 @@
       "required": true
     },
     "image": {
-      "allowedTypes": [
-        "images"
-      ],
       "type": "media",
       "multiple": false,
-      "required": true
+      "required": true,
+      "allowedTypes": [
+        "images"
+      ]
     },
     "link": {
       "type": "string",
-      "required": true
+      "required": true,
+      "regex": "(https:\\/\\/www\\.|http:\\/\\/www\\.|https:\\/\\/|http:\\/\\/)?[a-zA-Z0-9]{2,}(\\.[a-zA-Z0-9]{2,})(\\.[a-zA-Z0-9]{2,})?"
     }
   }
 }

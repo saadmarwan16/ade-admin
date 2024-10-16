@@ -67,6 +67,7 @@ export interface ComponentsProjects extends Struct.ComponentSchema {
   collectionName: 'components_components_projects';
   info: {
     displayName: 'Projects';
+    description: '';
   };
   attributes: {
     type: Schema.Attribute.Enumeration<['Projects', 'Companies', 'NGOs']> &
@@ -94,6 +95,7 @@ export interface ComponentsLogos extends Struct.ComponentSchema {
   info: {
     displayName: 'Logos';
     icon: 'twitter';
+    description: '';
   };
   attributes: {
     company: Schema.Attribute.String & Schema.Attribute.Required;
@@ -107,6 +109,7 @@ export interface ComponentsLinkedin extends Struct.ComponentSchema {
   info: {
     displayName: 'Linkedin';
     icon: 'twitter';
+    description: '';
   };
   attributes: {
     link: Schema.Attribute.String & Schema.Attribute.Required;
@@ -118,6 +121,7 @@ export interface ComponentsInstagram extends Struct.ComponentSchema {
   info: {
     displayName: 'Instagram';
     icon: 'twitter';
+    description: '';
   };
   attributes: {
     link: Schema.Attribute.String & Schema.Attribute.Required;

@@ -1,7 +1,8 @@
 {
   "collectionName": "components_components_projects",
   "info": {
-    "displayName": "Projects"
+    "displayName": "Projects",
+    "description": ""
   },
   "options": {},
   "attributes": {
@@ -29,15 +30,16 @@
     },
     "link": {
       "type": "string",
-      "required": false
+      "required": false,
+      "regex": "(https:\\/\\/www\\.|http:\\/\\/www\\.|https:\\/\\/|http:\\/\\/)?[a-zA-Z0-9]{2,}(\\.[a-zA-Z0-9]{2,})(\\.[a-zA-Z0-9]{2,})?"
     },
     "image": {
-      "allowedTypes": [
-        "images"
-      ],
       "type": "media",
       "multiple": false,
-      "required": true
+      "required": true,
+      "allowedTypes": [
+        "images"
+      ]
     }
   }
 }
