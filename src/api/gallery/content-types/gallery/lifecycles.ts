@@ -9,7 +9,6 @@ export default {
   },
   beforeUpdate(event) {
     const { data } = event.params;
-    console.log("Updated data:", data);
     if (data.title && typeof data.title === "string") {
       data.slug = slugify(data.title, { lower: true });
     }

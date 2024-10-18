@@ -4,7 +4,8 @@
   "info": {
     "singularName": "galleries-page",
     "pluralName": "galleries-pages",
-    "displayName": "Galleries Page"
+    "displayName": "Galleries Page",
+    "description": ""
   },
   "options": {
     "draftAndPublish": true
@@ -26,18 +27,6 @@
       "unique": true,
       "minLength": 15,
       "maxLength": 50
-    },
-    "description": {
-      "pluginOptions": {
-        "i18n": {
-          "localized": true
-        }
-      },
-      "type": "text",
-      "minLength": 25,
-      "maxLength": 120,
-      "required": true,
-      "unique": true
     },
     "seo": {
       "type": "component",

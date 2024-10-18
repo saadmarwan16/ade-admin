@@ -605,6 +605,13 @@ export interface ApiActivityActivity extends Struct.CollectionTypeSchema {
           localized: true;
         };
       }>;
+    thumbnail: Schema.Attribute.Media<'images'> &
+      Schema.Attribute.Required &
+      Schema.Attribute.SetPluginOptions<{
+        i18n: {
+          localized: false;
+        };
+      }>;
     createdAt: Schema.Attribute.DateTime;
     updatedAt: Schema.Attribute.DateTime;
     publishedAt: Schema.Attribute.DateTime;
@@ -626,6 +633,7 @@ export interface ApiGalleriesPageGalleriesPage extends Struct.SingleTypeSchema {
     singularName: 'galleries-page';
     pluralName: 'galleries-pages';
     displayName: 'Galleries Page';
+    description: '';
   };
   options: {
     draftAndPublish: true;
@@ -647,18 +655,6 @@ export interface ApiGalleriesPageGalleriesPage extends Struct.SingleTypeSchema {
       Schema.Attribute.SetMinMaxLength<{
         minLength: 15;
         maxLength: 50;
-      }>;
-    description: Schema.Attribute.Text &
-      Schema.Attribute.Required &
-      Schema.Attribute.Unique &
-      Schema.Attribute.SetPluginOptions<{
-        i18n: {
-          localized: true;
-        };
-      }> &
-      Schema.Attribute.SetMinMaxLength<{
-        minLength: 25;
-        maxLength: 120;
       }>;
     seo: Schema.Attribute.Component<'shared.seo', false> &
       Schema.Attribute.Required &
@@ -733,6 +729,13 @@ export interface ApiGalleryGallery extends Struct.CollectionTypeSchema {
       Schema.Attribute.SetPluginOptions<{
         i18n: {
           localized: true;
+        };
+      }>;
+    thumbnail: Schema.Attribute.Media<'images'> &
+      Schema.Attribute.Required &
+      Schema.Attribute.SetPluginOptions<{
+        i18n: {
+          localized: false;
         };
       }>;
     createdAt: Schema.Attribute.DateTime;
@@ -921,14 +924,39 @@ export interface ApiMetaMeta extends Struct.SingleTypeSchema {
   options: {
     draftAndPublish: true;
   };
+  pluginOptions: {
+    i18n: {
+      localized: true;
+    };
+  };
   attributes: {
     instagram: Schema.Attribute.Component<'components.instagram', false> &
-      Schema.Attribute.Required;
+      Schema.Attribute.Required &
+      Schema.Attribute.SetPluginOptions<{
+        i18n: {
+          localized: true;
+        };
+      }>;
     linkedin: Schema.Attribute.Component<'components.linkedin', false> &
-      Schema.Attribute.Required;
-    email: Schema.Attribute.Component<'components.email', false>;
+      Schema.Attribute.Required &
+      Schema.Attribute.SetPluginOptions<{
+        i18n: {
+          localized: true;
+        };
+      }>;
+    email: Schema.Attribute.Component<'components.email', false> &
+      Schema.Attribute.SetPluginOptions<{
+        i18n: {
+          localized: true;
+        };
+      }>;
     avatar: Schema.Attribute.Component<'components.single-avatar', false> &
-      Schema.Attribute.Required;
+      Schema.Attribute.Required &
+      Schema.Attribute.SetPluginOptions<{
+        i18n: {
+          localized: true;
+        };
+      }>;
     createdAt: Schema.Attribute.DateTime;
     updatedAt: Schema.Attribute.DateTime;
     publishedAt: Schema.Attribute.DateTime;
