@@ -4,7 +4,8 @@
   "info": {
     "singularName": "know-me",
     "pluralName": "know-mes",
-    "displayName": "Know me"
+    "displayName": "Know me",
+    "description": ""
   },
   "options": {
     "draftAndPublish": true
@@ -23,7 +24,10 @@
           "localized": true
         }
       },
-      "component": "components.details-of-me"
+      "component": "components.details-of-me",
+      "required": true,
+      "min": 1,
+      "max": 25
     },
     "seo": {
       "type": "component",

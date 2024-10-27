@@ -11,7 +11,13 @@
       "enum": [
         "Projects",
         "Companies",
-        "NGOs"
+        "NGOs",
+        "Projeler",
+        "Şirketler",
+        "STK'lar",
+        "Projets",
+        "Entreprises",
+        "ONG"
       ],
       "required": true
     },

@@ -786,13 +786,25 @@ export interface ApiHomePageHomePage extends Struct.SingleTypeSchema {
         i18n: {
           localized: true;
         };
-      }>;
+      }> &
+      Schema.Attribute.SetMinMax<
+        {
+          max: 15;
+        },
+        number
+      >;
     projects: Schema.Attribute.Component<'components.projects', true> &
       Schema.Attribute.SetPluginOptions<{
         i18n: {
           localized: true;
         };
-      }>;
+      }> &
+      Schema.Attribute.SetMinMax<
+        {
+          max: 25;
+        },
+        number
+      >;
     activities: Schema.Attribute.Relation<
       'oneToMany',
       'api::activity.activity'
@@ -845,6 +857,7 @@ export interface ApiKnowMeKnowMe extends Struct.SingleTypeSchema {
     singularName: 'know-me';
     pluralName: 'know-mes';
     displayName: 'Know me';
+    description: '';
   };
   options: {
     draftAndPublish: true;
@@ -856,11 +869,19 @@ export interface ApiKnowMeKnowMe extends Struct.SingleTypeSchema {
   };
   attributes: {
     details: Schema.Attribute.Component<'components.details-of-me', true> &
+      Schema.Attribute.Required &
       Schema.Attribute.SetPluginOptions<{
         i18n: {
           localized: true;
         };
-      }>;
+      }> &
+      Schema.Attribute.SetMinMax<
+        {
+          min: 1;
+          max: 25;
+        },
+        number
+      >;
     seo: Schema.Attribute.Component<'shared.seo', false> &
       Schema.Attribute.Required &
       Schema.Attribute.SetPluginOptions<{

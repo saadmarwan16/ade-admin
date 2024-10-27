@@ -35,7 +35,8 @@
           "localized": true
         }
       },
-      "component": "components.logos"
+      "component": "components.logos",
+      "max": 15
     },
     "projects": {
       "type": "component",
@@ -45,7 +46,8 @@
           "localized": true
         }
       },
-      "component": "components.projects"
+      "component": "components.projects",
+      "max": 25
     },
     "activities": {
       "type": "relation",

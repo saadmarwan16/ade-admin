@@ -13,7 +13,15 @@
         "Personal",
         "Social",
         "Political",
-        "Professional"
+        "Professional",
+        "Kişisel",
+        "Sosyal",
+        "Siyasal",
+        "Profesyonel",
+        "Personnel",
+        "Sociale",
+        "Politique",
+        "Professionnel"
       ]
     }
   }
