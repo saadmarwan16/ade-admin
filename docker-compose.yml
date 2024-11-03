@@ -5,7 +5,7 @@ services:
     build: .
     image: ade:latest
     restart: unless-stopped
-    # env_file: .env
+    env_file: .env
     environment:
       DATABASE_CLIENT: ${DATABASE_CLIENT}
       DATABASE_HOST: adeDB
@@ -28,7 +28,7 @@ services:
       - ./package.json:/opt/package.json
       - ./yarn.lock:/opt/yarn.lock
 
-      - ./.env:/opt/app/.env
+      # - ./.env:/opt/app/.env
       - ./public/uploads:/opt/app/public/uploads
     ports:
       - '1337:1337'
