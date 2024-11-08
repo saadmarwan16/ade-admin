@@ -2280,7 +2280,7 @@
     react-redux "8.1.3"
     yup "0.32.9"
 
-"@strapi/strapi@^5.3.0":
+"@strapi/strapi@^5.0.2":
   version "5.3.0"
   resolved "https://registry.yarnpkg.com/@strapi/strapi/-/strapi-5.3.0.tgz#af1cec957e12f8ba3178880b58104a20a82d748e"
   integrity sha512-f6DWn57m9B5Ocu+hbMV4ND1yBdh2H+rVms2rp8zOgnu/NcgwyTJHVv20+spv2WhkXxRA2luAqAUa+z1AnVenWQ==

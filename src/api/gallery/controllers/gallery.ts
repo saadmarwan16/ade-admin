@@ -17,7 +17,6 @@ export default factories.createCoreController(
           }
         | undefined;
       if (results?.documentId) {
-        console.log('Came here')
         const document = await strapi
           .documents("api::gallery.gallery")
           .findOne({
@@ -29,7 +28,6 @@ export default factories.createCoreController(
 
         return this.transformResponse(sanitizedDocument);
       } else {
-        console.log('Didnt come here')
         const sanitizedResults = await this.sanitizeOutput(results, ctx);
 
         return this.transformResponse(sanitizedResults);
