@@ -177,11 +177,11 @@ export interface SharedMetaSocial extends Struct.ComponentSchema {
 export interface SharedSeo extends Struct.ComponentSchema {
   collectionName: 'components_shared_seos';
   info: {
+    description: '';
     displayName: 'seo';
     icon: 'search';
   };
   attributes: {
-    canonicalURL: Schema.Attribute.String;
     keywords: Schema.Attribute.Text;
     metaDescription: Schema.Attribute.String &
       Schema.Attribute.Required &
@@ -190,15 +190,12 @@ export interface SharedSeo extends Struct.ComponentSchema {
         minLength: 50;
       }>;
     metaImage: Schema.Attribute.Media<'images' | 'files' | 'videos'>;
-    metaRobots: Schema.Attribute.String;
     metaSocial: Schema.Attribute.Component<'shared.meta-social', true>;
     metaTitle: Schema.Attribute.String &
       Schema.Attribute.Required &
       Schema.Attribute.SetMinMaxLength<{
         maxLength: 60;
       }>;
-    metaViewport: Schema.Attribute.String;
-    structuredData: Schema.Attribute.JSON;
   };
 }
 
