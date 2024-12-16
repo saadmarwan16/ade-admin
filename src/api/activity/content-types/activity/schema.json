@@ -51,17 +51,6 @@
         }
       }
     },
-    "categories": {
-      "type": "component",
-      "repeatable": true,
-      "pluginOptions": {
-        "i18n": {
-          "localized": true
-        }
-      },
-      "component": "components.categories",
-      "required": true
-    },
     "slug": {
       "pluginOptions": {
         "i18n": {
@@ -84,6 +73,20 @@
           "localized": false
         }
       }
+    },
+    "date": {
+      "pluginOptions": {
+        "i18n": {
+          "localized": true
+        }
+      },
+      "type": "date",
+      "required": true
+    },
+    "activity_categories": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::activity-category.activity-category"
     }
   }
 }

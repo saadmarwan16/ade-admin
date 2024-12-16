@@ -16,7 +16,7 @@
     }
   },
   "attributes": {
-    "logos": {
+    "partners": {
       "type": "component",
       "repeatable": true,
       "pluginOptions": {
@@ -44,17 +44,17 @@
       "target": "api::activity.activity"
     },
     "avatar": {
+      "type": "media",
+      "multiple": false,
+      "required": true,
       "allowedTypes": [
         "images"
       ],
-      "type": "media",
-      "multiple": false,
       "pluginOptions": {
         "i18n": {
           "localized": false
         }
-      },
-      "required": true
+      }
     }
   }
 }
