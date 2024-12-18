@@ -4,7 +4,8 @@
   "info": {
     "singularName": "activity-category",
     "pluralName": "activity-categories",
-    "displayName": "Activity Category"
+    "displayName": "Activity Category",
+    "description": ""
   },
   "options": {
     "draftAndPublish": true
@@ -39,7 +40,8 @@
         "green",
         "red",
         "blue"
-      ]
+      ],
+      "required": true
     }
   }
 }

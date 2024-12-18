@@ -373,6 +373,7 @@ export interface ApiActivityCategoryActivityCategory
   extends Struct.CollectionTypeSchema {
   collectionName: 'activity_categories';
   info: {
+    description: '';
     displayName: 'Activity Category';
     pluralName: 'activity-categories';
     singularName: 'activity-category';
@@ -387,6 +388,7 @@ export interface ApiActivityCategoryActivityCategory
   };
   attributes: {
     color: Schema.Attribute.Enumeration<['purple', 'green', 'red', 'blue']> &
+      Schema.Attribute.Required &
       Schema.Attribute.SetPluginOptions<{
         i18n: {
           localized: true;
@@ -764,6 +766,17 @@ export interface ApiMetaMeta extends Struct.SingleTypeSchema {
       }>;
     locale: Schema.Attribute.String;
     localizations: Schema.Attribute.Relation<'oneToMany', 'api::meta.meta'>;
+    location: Schema.Attribute.String &
+      Schema.Attribute.Required &
+      Schema.Attribute.SetPluginOptions<{
+        i18n: {
+          localized: true;
+        };
+      }> &
+      Schema.Attribute.SetMinMaxLength<{
+        maxLength: 100;
+        minLength: 2;
+      }>;
     logo: Schema.Attribute.Media<'images'> &
       Schema.Attribute.Required &
       Schema.Attribute.SetPluginOptions<{
@@ -797,6 +810,17 @@ export interface ApiMetaMeta extends Struct.SingleTypeSchema {
         },
         number
       >;
+    phone: Schema.Attribute.String &
+      Schema.Attribute.Required &
+      Schema.Attribute.SetPluginOptions<{
+        i18n: {
+          localized: false;
+        };
+      }> &
+      Schema.Attribute.SetMinMaxLength<{
+        maxLength: 20;
+        minLength: 10;
+      }>;
     publishedAt: Schema.Attribute.DateTime;
     twitter: Schema.Attribute.String &
       Schema.Attribute.Required &
@@ -808,6 +832,17 @@ export interface ApiMetaMeta extends Struct.SingleTypeSchema {
     updatedAt: Schema.Attribute.DateTime;
     updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
       Schema.Attribute.Private;
+    whatsapp: Schema.Attribute.String &
+      Schema.Attribute.Required &
+      Schema.Attribute.SetPluginOptions<{
+        i18n: {
+          localized: false;
+        };
+      }> &
+      Schema.Attribute.SetMinMaxLength<{
+        maxLength: 20;
+        minLength: 10;
+      }>;
     youtube: Schema.Attribute.String &
       Schema.Attribute.Required &
       Schema.Attribute.SetPluginOptions<{
@@ -836,6 +871,7 @@ export interface ApiProjectTypeProjectType extends Struct.CollectionTypeSchema {
   };
   attributes: {
     color: Schema.Attribute.Enumeration<['purple', 'green', 'red', 'blue']> &
+      Schema.Attribute.Required &
       Schema.Attribute.SetPluginOptions<{
         i18n: {
           localized: true;
