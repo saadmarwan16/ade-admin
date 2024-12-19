@@ -87,6 +87,11 @@
       "type": "relation",
       "relation": "oneToMany",
       "target": "api::activity-category.activity-category"
+    },
+    "related": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::activity.activity"
     }
   }
 }
