@@ -387,7 +387,7 @@ export interface ApiActivityCategoryActivityCategory
     };
   };
   attributes: {
-    color: Schema.Attribute.Enumeration<['purple', 'green', 'red', 'blue']> &
+    color: Schema.Attribute.Enumeration<['purple', 'green', 'orange', 'blue']> &
       Schema.Attribute.Required &
       Schema.Attribute.SetPluginOptions<{
         i18n: {
@@ -871,7 +871,7 @@ export interface ApiProjectTypeProjectType extends Struct.CollectionTypeSchema {
     };
   };
   attributes: {
-    color: Schema.Attribute.Enumeration<['purple', 'green', 'red', 'blue']> &
+    color: Schema.Attribute.Enumeration<['purple', 'green', 'orange', 'blue']> &
       Schema.Attribute.Required &
       Schema.Attribute.SetPluginOptions<{
         i18n: {

@@ -38,7 +38,7 @@
       "enum": [
         "purple",
         "green",
-        "red",
+        "orange",
         "blue"
       ],
       "required": true
