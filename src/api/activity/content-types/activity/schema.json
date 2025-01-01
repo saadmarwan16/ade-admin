@@ -51,28 +51,6 @@
         }
       }
     },
-    "categories": {
-      "type": "component",
-      "repeatable": true,
-      "pluginOptions": {
-        "i18n": {
-          "localized": true
-        }
-      },
-      "component": "components.categories",
-      "required": true
-    },
-    "seo": {
-      "type": "component",
-      "repeatable": false,
-      "pluginOptions": {
-        "i18n": {
-          "localized": true
-        }
-      },
-      "component": "shared.seo",
-      "required": true
-    },
     "slug": {
       "pluginOptions": {
         "i18n": {
@@ -95,6 +73,25 @@
           "localized": false
         }
       }
+    },
+    "date": {
+      "pluginOptions": {
+        "i18n": {
+          "localized": true
+        }
+      },
+      "type": "date",
+      "required": true
+    },
+    "activity_categories": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::activity-category.activity-category"
+    },
+    "related": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::activity.activity"
     }
   }
 }

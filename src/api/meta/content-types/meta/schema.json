@@ -16,48 +16,131 @@
     }
   },
   "attributes": {
-    "instagram": {
-      "type": "component",
-      "repeatable": false,
-      "component": "components.instagram",
-      "required": true,
-      "pluginOptions": {
-        "i18n": {
-          "localized": true
-        }
-      }
-    },
     "linkedin": {
-      "type": "component",
-      "repeatable": false,
-      "component": "components.linkedin",
-      "required": true,
       "pluginOptions": {
         "i18n": {
-          "localized": true
+          "localized": false
         }
-      }
+      },
+      "type": "string",
+      "regex": "(https:\\/\\/www\\.|http:\\/\\/www\\.|https:\\/\\/|http:\\/\\/)?[a-zA-Z0-9]{2,}(\\.[a-zA-Z0-9]{2,})(\\.[a-zA-Z0-9]{2,})?",
+      "required": true
     },
     "email": {
-      "type": "component",
-      "repeatable": false,
-      "component": "components.email",
       "pluginOptions": {
         "i18n": {
-          "localized": true
+          "localized": false
+        }
+      },
+      "type": "string",
+      "regex": "(https:\\/\\/www\\.|http:\\/\\/www\\.|https:\\/\\/|http:\\/\\/)?[a-zA-Z0-9]{2,}(\\.[a-zA-Z0-9]{2,})(\\.[a-zA-Z0-9]{2,})?",
+      "required": true
+    },
+    "twitter": {
+      "pluginOptions": {
+        "i18n": {
+          "localized": false
+        }
+      },
+      "type": "string",
+      "regex": "(https:\\/\\/www\\.|http:\\/\\/www\\.|https:\\/\\/|http:\\/\\/)?[a-zA-Z0-9]{2,}(\\.[a-zA-Z0-9]{2,})(\\.[a-zA-Z0-9]{2,})?",
+      "required": true
+    },
+    "facebook": {
+      "pluginOptions": {
+        "i18n": {
+          "localized": false
+        }
+      },
+      "type": "string",
+      "regex": "(https:\\/\\/www\\.|http:\\/\\/www\\.|https:\\/\\/|http:\\/\\/)?[a-zA-Z0-9]{2,}(\\.[a-zA-Z0-9]{2,})(\\.[a-zA-Z0-9]{2,})?",
+      "required": true
+    },
+    "instagram": {
+      "pluginOptions": {
+        "i18n": {
+          "localized": false
+        }
+      },
+      "type": "string",
+      "regex": "(https:\\/\\/www\\.|http:\\/\\/www\\.|https:\\/\\/|http:\\/\\/)?[a-zA-Z0-9]{2,}(\\.[a-zA-Z0-9]{2,})(\\.[a-zA-Z0-9]{2,})?",
+      "required": true
+    },
+    "youtube": {
+      "pluginOptions": {
+        "i18n": {
+          "localized": false
+        }
+      },
+      "type": "string",
+      "regex": "(https:\\/\\/www\\.|http:\\/\\/www\\.|https:\\/\\/|http:\\/\\/)?[a-zA-Z0-9]{2,}(\\.[a-zA-Z0-9]{2,})(\\.[a-zA-Z0-9]{2,})?",
+      "required": true
+    },
+    "logo": {
+      "type": "media",
+      "multiple": false,
+      "required": true,
+      "allowedTypes": [
+        "images"
+      ],
+      "pluginOptions": {
+        "i18n": {
+          "localized": false
         }
       }
     },
-    "avatar": {
-      "type": "component",
-      "repeatable": false,
-      "component": "components.single-avatar",
+    "number_of_activities": {
+      "pluginOptions": {
+        "i18n": {
+          "localized": false
+        }
+      },
+      "type": "integer",
       "required": true,
+      "min": 0
+    },
+    "number_of_projects": {
+      "pluginOptions": {
+        "i18n": {
+          "localized": false
+        }
+      },
+      "type": "integer",
+      "required": true,
+      "min": 0
+    },
+    "phone": {
+      "pluginOptions": {
+        "i18n": {
+          "localized": false
+        }
+      },
+      "type": "string",
+      "required": true,
+      "maxLength": 20,
+      "minLength": 10
+    },
+    "whatsapp": {
+      "pluginOptions": {
+        "i18n": {
+          "localized": false
+        }
+      },
+      "type": "string",
+      "required": true,
+      "minLength": 10,
+      "maxLength": 20
+    },
+    "location": {
       "pluginOptions": {
         "i18n": {
           "localized": true
         }
-      }
+      },
+      "type": "string",
+      "required": true,
+      "minLength": 2,
+      "maxLength": 100
     }
   }
 }

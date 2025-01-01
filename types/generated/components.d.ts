@@ -30,6 +30,7 @@ export interface ComponentsCategories extends Struct.ComponentSchema {
 export interface ComponentsDetailsOfMe extends Struct.ComponentSchema {
   collectionName: 'components_components_details_of_mes';
   info: {
+    description: '';
     displayName: 'Details of Me';
     icon: 'heart';
   };
@@ -38,15 +39,14 @@ export interface ComponentsDetailsOfMe extends Struct.ComponentSchema {
       Schema.Attribute.Required &
       Schema.Attribute.Unique &
       Schema.Attribute.SetMinMaxLength<{
-        maxLength: 450;
-        minLength: 75;
+        minLength: 100;
       }>;
     image: Schema.Attribute.Media<'images'> & Schema.Attribute.Required;
     title: Schema.Attribute.String &
       Schema.Attribute.Required &
       Schema.Attribute.Unique &
       Schema.Attribute.SetMinMaxLength<{
-        maxLength: 150;
+        maxLength: 100;
         minLength: 2;
       }>;
   };
@@ -95,8 +95,8 @@ export interface ComponentsLogos extends Struct.ComponentSchema {
   };
   attributes: {
     company: Schema.Attribute.String & Schema.Attribute.Required;
-    image: Schema.Attribute.Media<'images'> & Schema.Attribute.Required;
     link: Schema.Attribute.String & Schema.Attribute.Required;
+    logo: Schema.Attribute.Media<'images'> & Schema.Attribute.Required;
   };
 }
 
@@ -110,11 +110,14 @@ export interface ComponentsProjects extends Struct.ComponentSchema {
     description: Schema.Attribute.Text &
       Schema.Attribute.Required &
       Schema.Attribute.SetMinMaxLength<{
-        maxLength: 350;
         minLength: 100;
       }>;
     image: Schema.Attribute.Media<'images'> & Schema.Attribute.Required;
     link: Schema.Attribute.String;
+    project_types: Schema.Attribute.Relation<
+      'oneToMany',
+      'api::project-type.project-type'
+    >;
     title: Schema.Attribute.String &
       Schema.Attribute.Required &
       Schema.Attribute.Unique &
@@ -122,20 +125,6 @@ export interface ComponentsProjects extends Struct.ComponentSchema {
         maxLength: 150;
         minLength: 15;
       }>;
-    type: Schema.Attribute.Enumeration<
-      [
-        'Projects',
-        'Companies',
-        'NGOs',
-        'Projeler',
-        '\u015Eirketler',
-        "STK'lar",
-        'Projets',
-        'Entreprises',
-        'ONG',
-      ]
-    > &
-      Schema.Attribute.Required;
   };
 }
 

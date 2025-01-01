@@ -22,6 +22,7 @@ export default factories.createCoreController(
           .findOne({
             documentId: results.documentId,
             populate: populate,
+            fields: ['title', 'body', 'date'],
             locale: locale ?? "en",
           });
         const sanitizedDocument = await this.sanitizeOutput(document, ctx);

@@ -6,21 +6,6 @@
   },
   "options": {},
   "attributes": {
-    "type": {
-      "type": "enumeration",
-      "enum": [
-        "Projects",
-        "Companies",
-        "NGOs",
-        "Projeler",
-        "Şirketler",
-        "STK'lar",
-        "Projets",
-        "Entreprises",
-        "ONG"
-      ],
-      "required": true
-    },
     "title": {
       "type": "string",
       "required": true,
@@ -31,8 +16,7 @@
     "description": {
       "type": "text",
       "required": true,
-      "minLength": 100,
-      "maxLength": 350
+      "minLength": 100
     },
     "link": {
       "type": "string",
@@ -46,6 +30,11 @@
       "allowedTypes": [
         "images"
       ]
+    },
+    "project_types": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::project-type.project-type"
     }
   }
 }

@@ -1,10 +1,10 @@
 {
-  "kind": "singleType",
-  "collectionName": "galleries_pages",
+  "kind": "collectionType",
+  "collectionName": "project_types",
   "info": {
-    "singularName": "galleries-page",
-    "pluralName": "galleries-pages",
-    "displayName": "Galleries Page",
+    "singularName": "project-type",
+    "pluralName": "project-types",
+    "displayName": "Project Type",
     "description": ""
   },
   "options": {
@@ -24,19 +24,23 @@
       },
       "type": "string",
       "required": true,
-      "unique": true,
-      "minLength": 15,
-      "maxLength": 50
+      "minLength": 2,
+      "maxLength": 45,
+      "unique": true
     },
-    "seo": {
-      "type": "component",
-      "repeatable": false,
+    "color": {
       "pluginOptions": {
         "i18n": {
           "localized": true
         }
       },
-      "component": "shared.seo",
+      "type": "enumeration",
+      "enum": [
+        "purple",
+        "green",
+        "orange",
+        "blue"
+      ],
       "required": true
     }
   }
